@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClickConnect | Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <header class="app-header">
+      <div class="logo">ClickConnect</div>
+      <nav class="app-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="ai.html">AI Agent</a>
+        <a class="active" href="gallery.html">Gallery</a>
+      </nav>
+      <div class="app-actions">
+        <button class="ghost">New Collection</button>
+        <button class="primary">Upload Edits</button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="gallery-workspace">
+        <div class="app-card">
+          <h3>Featured collections</h3>
+          <div class="gallery-grid">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Graduation couple" />
+              <figcaption>Graduation · Cinematic storytelling</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Matriculation portrait" />
+              <figcaption>Matriculation · Natural light portraits</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=800&q=80" alt="Birthday celebration" />
+              <figcaption>Birthday · Brand-forward imagery</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="app-card">
+          <h3>Client delivery status</h3>
+          <ul class="list">
+            <li>
+              <div>
+                <strong>Zara + Luis</strong>
+                <span>Gallery open · 18 favorites</span>
+              </div>
+              <span class="status-pill">Needs approval</span>
+            </li>
+            <li>
+              <div>
+                <strong>Apex Studio</strong>
+                <span>Final edits ready to deliver</span>
+              </div>
+              <span class="status-pill">Ready</span>
+            </li>
+            <li>
+              <div>
+                <strong>Tate Family</strong>
+                <span>Requested two retouches</span>
+              </div>
+              <span class="status-pill warning">In review</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
