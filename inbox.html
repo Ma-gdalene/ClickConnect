@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClickConnect | Inbox</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <header class="app-header">
+      <div class="logo">ClickConnect</div>
+      <nav class="app-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="inbox.html">Inbox</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="ai.html">AI Agent</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+      <div class="app-actions">
+        <button class="ghost">Filters</button>
+        <button class="primary">New Message</button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="inbox-grid">
+        <aside class="app-card">
+          <h3>Client Threads</h3>
+          <div class="thread active">
+            <strong>Zara + Luis</strong>
+            <span>Graduation · Asking about locations</span>
+          </div>
+          <div class="thread">
+            <strong>Elena Park</strong>
+            <span>Branding · Wants reschedule</span>
+          </div>
+          <div class="thread">
+            <strong>Jae Kim</strong>
+            <span>Birthday · Deposit confirmation</span>
+          </div>
+          <div class="thread">
+            <strong>Tate Family</strong>
+            <span>Family · Gallery feedback</span>
+          </div>
+        </aside>
+        <section class="app-card">
+          <div class="conversation-header">
+            <div>
+              <h3>Zara + Luis</h3>
+              <p class="muted">Graduation session · Apr 26 · Golden Hour</p>
+            </div>
+            <button class="ghost">View Timeline</button>
+          </div>
+          <div class="conversation" id="conversation">
+            <div class="chat-message">Hi! We love the waterfront idea. Do you have any parking tips?</div>
+            <div class="chat-message user">Yes! I’ll send a map and a list of easy parking garages.</div>
+            <div class="chat-message">Also, can we bring confetti for the final shots?</div>
+          </div>
+          <form class="chat-input" id="inboxForm">
+            <input type="text" name="message" placeholder="Type a reply..." required />
+            <button class="primary" type="submit">Send</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
