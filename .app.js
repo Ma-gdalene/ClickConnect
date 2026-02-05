@@ -3,6 +3,10 @@ const notifyButton = document.getElementById("notifyButton");
 const bookingForm = document.getElementById("bookingForm");
 const chatForm = document.getElementById("chatForm");
 const chatBody = document.getElementById("chatBody");
+const inboxForm = document.getElementById("inboxForm");
+const conversation = document.getElementById("conversation");
+const agentForm = document.getElementById("agentForm");
+const agentBody = document.getElementById("agentBody");
 
 const notificationTemplates = [
   "New inquiry received from %client% for a %type% session.",
@@ -20,6 +24,9 @@ const aiReplies = [
 ];
 
 function addNotification(message) {
+  if (!notifications) {
+    return;
+  }
   const item = document.createElement("li");
   item.textContent = message;
   notifications.prepend(item);
@@ -57,6 +64,9 @@ function handleNotificationButton() {
 }
 
 function appendChatMessage(message, type) {
+  if (!chatBody) {
+    return;
+  }
   const bubble = document.createElement("div");
   bubble.className = `chat-message ${type}`;
   bubble.textContent = message;
@@ -77,11 +87,112 @@ function handleChat(event) {
   input.value = "";
 }
 
-notifyButton.addEventListener("click", handleNotificationButton);
-bookingForm.addEventListener("submit", handleBooking);
-chatForm.addEventListener("submit", handleChat);
+function appendConversation(message, type = "user") {
+  if (!conversation) {
+    return;
+  }
+  const bubble = document.createElement("div");
+  bubble.className = `chat-message ${type}`;
+  bubble.textContent = message;
+  conversation.appendChild(bubble);
+  conversation.scrollTop = conversation.scrollHeight;
+}
 
-addNotification("AI Concierge is monitoring new inquiries.");
-addNotification("Gallery preview sent to Ava + Noah.");
+function handleInbox(event) {
+  event.preventDefault();
+  const input = event.target.elements.message;
+  const message = input.value.trim();
+  if (!message) {
+    return;
+  }
+  appendConversation(message, "user");
+  input.value = "";
+}
 
+const agentKnowledge = {
+  pricing: {
+    graduation: "$350",
+    branding: "$600",
+    family: "$450",
+    matriculation: "$380",
+    birthday: "$320",
+  },
+  availability: [
+    "Apr 30 · Golden Hour",
+    "May 03 · Morning",
+    "May 05 · Afternoon",
+  ],
+  addOns: ["Extra retouching", "Second location", "Rush gallery delivery"],
+};
 
+function formatAvailability() {
+  return agentKnowledge.availability.join(", ");
+}
+
+function generateAgentReply(message) {
+  const text = message.toLowerCase();
+  if (text.includes("price") || text.includes("cost")) {
+    return `Here are current package rates: Graduation ${agentKnowledge.pricing.graduation}, Branding ${agentKnowledge.pricing.branding}, Family ${agentKnowledge.pricing.family}, Matriculation ${agentKnowledge.pricing.matriculation}, Birthday ${agentKnowledge.pricing.birthday}.`;
+  }
+  if (text.includes("availability") || text.includes("available") || text.includes("slots")) {
+    return `The next available sessions are ${formatAvailability()}. Want me to reserve one?`;
+  }
+  if (text.includes("book") || text.includes("reserve")) {
+    return "Great! I can lock in a session. Which date and time window should I hold for you?";
+  }
+  if (text.includes("gallery") || text.includes("portfolio")) {
+    return "I can share a curated gallery link with recent graduation, branding, and family sessions. Which style do you prefer?";
+  }
+  if (text.includes("add-on") || text.includes("extra")) {
+    return `Popular add-ons include ${agentKnowledge.addOns.join(", ")}. Want details on any of those?`;
+  }
+  if (text.includes("hello") || text.includes("hi")) {
+    return "Hi there! I can help with pricing, availability, or booking a session.";
+  }
+  return "Thanks for the note! I can help with pricing, availability, or booking—what would you like to explore first?";
+}
+
+function appendAgentMessage(message, type) {
+  if (!agentBody) {
+    return;
+  }
+  const bubble = document.createElement("div");
+  bubble.className = `chat-message ${type}`;
+  bubble.textContent = message;
+  agentBody.appendChild(bubble);
+  agentBody.scrollTop = agentBody.scrollHeight;
+}
+
+function handleAgent(event) {
+  event.preventDefault();
+  const input = event.target.elements.message;
+  const message = input.value.trim();
+  if (!message) {
+    return;
+  }
+  appendAgentMessage(message, "user");
+  const reply = generateAgentReply(message);
+  setTimeout(() => appendAgentMessage(reply, "bot"), 300);
+  input.value = "";
+}
+
+if (notifyButton) {
+  notifyButton.addEventListener("click", handleNotificationButton);
+}
+if (bookingForm) {
+  bookingForm.addEventListener("submit", handleBooking);
+}
+if (chatForm) {
+  chatForm.addEventListener("submit", handleChat);
+}
+if (inboxForm) {
+  inboxForm.addEventListener("submit", handleInbox);
+}
+if (agentForm) {
+  agentForm.addEventListener("submit", handleAgent);
+}
+
+if (notifications) {
+  addNotification("AI Concierge is monitoring new inquiries.");
+  addNotification("Gallery preview sent to Ava + Noah.");
+}
