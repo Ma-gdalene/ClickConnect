@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClickConnect | AI Agent</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <header class="app-header">
+      <div class="logo">ClickConnect</div>
+      <nav class="app-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="bookings.html">Bookings</a>
+        <a class="active" href="ai.html">AI Agent</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+      <div class="app-actions">
+        <button class="ghost">Agent Settings</button>
+        <button class="primary">Go Live</button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="ai-workspace">
+        <div class="app-card">
+          <h3>AI concierge status</h3>
+          <p class="muted">Responding instantly to FAQs, pricing, and availability.</p>
+          <div class="status-grid">
+            <div>
+              <strong>92%</strong>
+              <span>Auto-replies resolved</span>
+            </div>
+            <div>
+              <strong>18 sec</strong>
+              <span>Average response time</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Escalations today</span>
+            </div>
+          </div>
+          <div class="pill-row">
+            <span>Availability synced</span>
+            <span>Pricing approved</span>
+            <span>Gallery links ready</span>
+          </div>
+        </div>
+
+        <div class="ai-chat" id="agentChat">
+          <div class="chat-header">AI Concierge · Live Preview</div>
+          <div class="chat-body" id="agentBody">
+            <div class="chat-message bot">
+              Hi! I’m ClickConnect’s AI concierge. Ask me about packages, availability, or booking.
+            </div>
+          </div>
+          <form class="chat-input" id="agentForm">
+            <input type="text" name="message" placeholder="Ask about pricing or availability..." required />
+            <button class="primary" type="submit">Send</button>
+          </form>
+        </div>
+
+        <div class="app-card">
+          <h3>Knowledge base</h3>
+          <p class="muted">The AI agent uses these details to answer clients.</p>
+          <ul class="list">
+            <li>
+              <div>
+                <strong>Package pricing</strong>
+                <span>Graduation: $350 · Branding: $600 · Family: $450</span>
+              </div>
+              <span class="status-pill">Synced</span>
+            </li>
+            <li>
+              <div>
+                <strong>Response templates</strong>
+                <span>15 approved messages</span>
+              </div>
+              <span class="status-pill">Approved</span>
+            </li>
+            <li>
+              <div>
+                <strong>Next open slots</strong>
+                <span>Apr 30 · May 03 · May 05</span>
+              </div>
+              <span class="status-pill warning">Update soon</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
