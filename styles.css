@@ -23,6 +23,10 @@ body {
   line-height: 1.6;
 }
 
+.app-body {
+  background: #f5f6fb;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -414,6 +418,238 @@ a {
   font-size: 0.9rem;
 }
 
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 48px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.app-nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.app-nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.app-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app-main {
+  padding: 40px 48px 80px;
+  display: grid;
+  gap: 32px;
+}
+
+.app-hero {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+}
+
+.summary-card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 16px;
+}
+
+.summary-card ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.app-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.app-card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(23, 26, 42, 0.08);
+  display: grid;
+  gap: 16px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.list li span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.status-pill {
+  background: #eef0ff;
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.status-pill.warning {
+  background: #fff1e8;
+  color: #b45309;
+}
+
+.notification-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.notification-stack div {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #f8f8ff;
+}
+
+.inbox-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+}
+
+.thread {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #fafafe;
+  font-size: 0.9rem;
+}
+
+.thread.active {
+  border-color: #c5c9ff;
+  background: #f0f1ff;
+}
+
+.conversation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.conversation {
+  display: grid;
+  gap: 12px;
+  max-height: 320px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.booking-layout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.calendar-list {
+  display: grid;
+  gap: 14px;
+}
+
+.calendar-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #f8f8ff;
+  font-size: 0.9rem;
+}
+
+.pipeline {
+  display: grid;
+  gap: 12px;
+}
+
+.availability {
+  display: grid;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #f8f8ff;
+}
+
+.availability ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.ai-workspace {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+}
+
+.status-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.status-grid span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.gallery-workspace {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+}
+
 @media (max-width: 900px) {
   .nav {
     flex-direction: column;
@@ -434,6 +670,20 @@ a {
 
   .footer {
     padding: 40px 24px;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px;
+  }
+
+  .app-main {
+    padding: 32px 24px 64px;
+  }
+
+  .inbox-grid {
+    grid-template-columns: 1fr;
   }
 }
 
