@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClickConnect | Bookings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <header class="app-header">
+      <div class="logo">ClickConnect</div>
+      <nav class="app-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="inbox.html">Inbox</a>
+        <a class="active" href="bookings.html">Bookings</a>
+        <a href="ai.html">AI Agent</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+      <div class="app-actions">
+        <button class="ghost">Sync Calendar</button>
+        <button class="primary">New Booking</button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="booking-layout">
+        <div class="app-card">
+          <h3>Upcoming shoots</h3>
+          <div class="calendar-list">
+            <div class="calendar-item">
+              <div>
+                <strong>Apr 26 · Graduation</strong>
+                <span>Zara + Luis · Riverfront Park</span>
+              </div>
+              <span class="status-pill">Confirmed</span>
+            </div>
+            <div class="calendar-item">
+              <div>
+                <strong>Apr 29 · Branding</strong>
+                <span>Elena Park · Downtown Studio</span>
+              </div>
+              <span class="status-pill warning">Reschedule</span>
+            </div>
+            <div class="calendar-item">
+              <div>
+                <strong>May 02 · Family</strong>
+                <span>Tate Family · Oak Grove</span>
+              </div>
+              <span class="status-pill">Questionnaire sent</span>
+            </div>
+          </div>
+        </div>
+        <div class="app-card">
+          <h3>Booking pipeline</h3>
+          <div class="pipeline">
+            <div>
+              <strong>New inquiries</strong>
+              <p class="muted">3 waiting on reply</p>
+            </div>
+            <div>
+              <strong>Pending contracts</strong>
+              <p class="muted">2 awaiting signature</p>
+            </div>
+            <div>
+              <strong>Payments</strong>
+              <p class="muted">$1,450 captured this week</p>
+            </div>
+          </div>
+          <button class="ghost">Open booking settings</button>
+        </div>
+        <div class="app-card">
+          <h3>Availability</h3>
+          <p class="muted">Share the link below with clients to claim a session time.</p>
+          <div class="availability">
+            <div>
+              <strong>Next open slots</strong>
+              <ul>
+                <li>Apr 30 · Golden Hour</li>
+                <li>May 03 · Morning</li>
+                <li>May 05 · Afternoon</li>
+              </ul>
+            </div>
+            <button class="primary">Copy booking link</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
