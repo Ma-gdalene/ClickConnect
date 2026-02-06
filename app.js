@@ -196,3 +196,4 @@ if (notifications) {
   addNotification("AI Concierge is monitoring new inquiries.");
   addNotification("Gallery preview sent to Ava + Noah.");
 }
+
