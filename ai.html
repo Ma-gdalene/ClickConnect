@@ -17,20 +17,20 @@
         <a href="gallery.html">Gallery</a>
       </nav>
       <div class="app-actions">
-        <button class="ghost">Agent Settings</button>
-        <button class="primary">Go Live</button>
+        <a class="ghost" href="bookings.html">Check availability</a>
+        <a class="primary" href="inbox.html">Message photographer</a>
       </div>
     </header>
 
     <main class="app-main">
       <section class="ai-workspace">
         <div class="app-card">
-          <h3>AI concierge status</h3>
-          <p class="muted">Responding instantly to FAQs, pricing, and availability.</p>
+          <h3>AI concierge</h3>
+          <p class="muted">Get instant answers about pricing, availability, and booking.</p>
           <div class="status-grid">
             <div>
               <strong>92%</strong>
-              <span>Auto-replies resolved</span>
+              <span>Questions answered</span>
             </div>
             <div>
               <strong>18 sec</strong>
@@ -38,21 +38,21 @@
             </div>
             <div>
               <strong>3</strong>
-              <span>Escalations today</span>
+              <span>Chats with photographer</span>
             </div>
           </div>
           <div class="pill-row">
             <span>Availability synced</span>
-            <span>Pricing approved</span>
-            <span>Gallery links ready</span>
+            <span>Packages in GHS</span>
+            <span>Gallery updates live</span>
           </div>
         </div>
 
         <div class="ai-chat" id="agentChat">
-          <div class="chat-header">AI Concierge · Live Preview</div>
+          <div class="chat-header">AI Concierge · Client Assistant</div>
           <div class="chat-body" id="agentBody">
             <div class="chat-message bot">
-              Hi! I’m ClickConnect’s AI concierge. Ask me about packages, availability, or booking.
+              Hi! I’m ClickConnect’s client assistant. Ask about packages, availability, or booking.
             </div>
           </div>
           <form class="chat-input" id="agentForm">
@@ -62,27 +62,27 @@
         </div>
 
         <div class="app-card">
-          <h3>Knowledge base</h3>
-          <p class="muted">The AI agent uses these details to answer clients.</p>
+          <h3>Your booking info</h3>
+          <p class="muted">Saved preferences for faster replies.</p>
           <ul class="list">
             <li>
               <div>
-                <strong>Package pricing (GHS)</strong>
-                <span>Graduation: 350 · Matriculation: 300 · Birthday: 250 · Family: 450</span>
+                <strong>Selected package</strong>
+                <span>Graduation shoot · 2 outfits · GHS 350</span>
               </div>
               <span class="status-pill">Synced</span>
             </li>
             <li>
               <div>
-                <strong>Response templates</strong>
-                <span>15 approved messages</span>
+                <strong>Preferred time</strong>
+                <span>Golden hour · Saturday</span>
               </div>
               <span class="status-pill">Approved</span>
             </li>
             <li>
               <div>
                 <strong>Video add-ons</strong>
-                <span>Highlight video · Reels (2) · Full event film</span>
+                <span>Reels (2) · Highlight video</span>
               </div>
               <span class="status-pill warning">Update soon</span>
             </li>
@@ -94,4 +94,3 @@
     <script src="app.js"></script>
   </body>
 </html>
-
