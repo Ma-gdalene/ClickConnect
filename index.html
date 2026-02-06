@@ -7,222 +7,82 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <nav class="nav">
+    <header class="landing-hero">
+      <nav class="landing-nav">
         <div class="logo">ClickConnect</div>
-        <div class="nav-links">
-          <a href="#features">Features</a>
-          <a href="#booking">Book</a>
+        <div class="landing-links">
+          <a href="#experience">Experience</a>
+          <a href="#workspace">Workspace</a>
           <a href="#ai">AI Agent</a>
-          <a href="#gallery">Gallery</a>
         </div>
-        <button class="primary">Get Started</button>
+        <a class="primary" href="#workspace">Enter Workspace</a>
       </nav>
-      <div class="hero-content">
-        <div>
-          <p class="eyebrow">Photographer + Client Collaboration</p>
-          <h1>Capture every detail, from first inquiry to final delivery.</h1>
+      <div class="landing-media">
+        <img
+          src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1600&q=80"
+          alt="Photographer capturing a client session"
+        />
+        <div class="landing-overlay">
+          <p class="eyebrow">ClickConnect</p>
+          <h1>Beautiful client experiences for modern photographers.</h1>
           <p class="subhead">
-            Manage client conversations, send real-time updates, and let an AI assistant handle
-            scheduling so you can focus on the shoot.
+            One cinematic space for booking, messaging, galleries, and AI support.
           </p>
           <div class="cta-row">
-            <button class="primary">Launch Workspace</button>
-            <button class="ghost">Watch Demo</button>
-          </div>
-          <div class="stats">
-            <div>
-              <strong>2 min</strong>
-              <span>Average booking time</span>
-            </div>
-            <div>
-              <strong>24/7</strong>
-              <span>AI reply coverage</span>
-            </div>
-            <div>
-              <strong>98%</strong>
-              <span>Client satisfaction</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="status">
-            <span class="dot"></span>
-            New Inquiry · Live
-          </div>
-          <h3>Alex + Jamie · Engagement Session</h3>
-          <p>Saturday · 4:30 PM · Riverfront Park</p>
-          <div class="pill-row">
-            <span>Contract signed</span>
-            <span>Deposit paid</span>
-            <span>Shot list shared</span>
-          </div>
-          <div class="mini-chat">
-            <div class="bubble">Hi! Can we add a golden-hour location?</div>
-            <div class="bubble response">Absolutely. I have three spots ready.</div>
+            <a class="primary" href="#workspace">Explore the workspace</a>
+            <a class="ghost" href="#ai">Meet the AI concierge</a>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section id="features" class="section">
-        <div class="section-title">
-          <h2>Everything you need to collaborate with clients</h2>
-          <p>One hub for communication, booking, and delivery with polished client experiences.</p>
+      <section id="experience" class="landing-section">
+        <div>
+          <h2>Everything lives in one calm dashboard.</h2>
+          <p class="subhead">
+            Move from inquiry to delivery with smooth transitions between inbox, bookings, and gallery.
+          </p>
         </div>
-        <div class="feature-grid">
-          <article>
-            <h3>Unified Client Inbox</h3>
-            <p>Keep email, DMs, and form inquiries in one timeline with quick-reply templates.</p>
-          </article>
-          <article>
-            <h3>Real-Time Notifications</h3>
-            <p>Automatic alerts for schedule updates, approvals, and deliverables.</p>
-          </article>
-          <article>
-            <h3>AI Concierge</h3>
-            <p>Answer FAQs, propose times, and prepare call sheets for every shoot.</p>
-          </article>
-          <article>
-            <h3>Client Booking Portal</h3>
-            <p>Let clients reserve sessions, pay deposits, and sign contracts in minutes.</p>
-          </article>
-          <article>
-            <h3>Smart Gallery</h3>
-            <p>Showcase your portfolio and share curated galleries with branded downloads.</p>
-          </article>
-          <article>
-            <h3>Delivery Tracker</h3>
-            <p>Automate deadlines, feedback loops, and final export reminders.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="booking" class="section booking">
-        <div class="section-title">
-          <h2>Book a shoot in seconds</h2>
-          <p>Clients can see live availability, select a package, and get instant confirmation.</p>
-        </div>
-        <div class="booking-grid">
-          <form class="booking-form" id="bookingForm">
-            <label>
-              Client name
-              <input type="text" name="name" placeholder="e.g. Maria Torres" required />
-            </label>
-            <label>
-              Shoot type
-              <select name="type" required>
-                <option value="">Select session</option>
-                <option>Graduation</option>
-                <option>Matriculation</option>
-                <option>Birthday</option>
-                <option>Family</option>
-                <option>Branding</option>
-              </select>
-            </label>
-            <label>
-              Preferred date
-              <input type="date" name="date" required />
-            </label>
-            <label>
-              Time window
-              <select name="time" required>
-                <option value="">Select window</option>
-                <option>Morning (8-11 AM)</option>
-                <option>Afternoon (12-3 PM)</option>
-                <option>Golden Hour (4-7 PM)</option>
-                <option>Evening (7-9 PM)</option>
-              </select>
-            </label>
-            <label>
-              Add notes
-              <textarea name="notes" rows="3" placeholder="Locations, style, or inspiration"></textarea>
-            </label>
-            <button class="primary" type="submit">Request Booking</button>
-          </form>
-          <div class="booking-panel">
-            <h3>Live notification feed</h3>
-            <ul class="notifications" id="notifications"></ul>
-            <div class="panel-footer">
-              <p>Clients receive SMS + email updates with every change.</p>
-              <button class="ghost" id="notifyButton" type="button">Trigger Test Update</button>
-            </div>
+        <div class="landing-stats">
+          <div>
+            <strong>2 min</strong>
+            <span>Average booking time</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>AI coverage</span>
+          </div>
+          <div>
+            <strong>98%</strong>
+            <span>Client satisfaction</span>
           </div>
         </div>
       </section>
 
-      <section id="ai" class="section ai">
-        <div class="section-title">
-          <h2>AI agent that keeps conversations moving</h2>
-          <p>Offer instant answers, suggested schedules, and creative prep without extra inbox work.</p>
-        </div>
-        <div class="ai-grid">
-          <div class="ai-card">
-            <h3>Suggested reply</h3>
-            <p>“Thanks for reaching out! I have a Graduation slots next Friday and Saturday. Which works best?”</p>
-            <ul>
-              <li>Pulls availability from your calendar.</li>
-              <li>Suggests pricing and add-on services.</li>
-              <li>Logs every interaction in the client timeline.</li>
-            </ul>
-          </div>
-          <div class="ai-chat" id="aiChat">
-            <div class="chat-header">AI Concierge · Online</div>
-            <div class="chat-body" id="chatBody">
-              <div class="chat-message bot">Hi! I can help you book a session or share the gallery.</div>
-            </div>
-            <form class="chat-input" id="chatForm">
-              <input type="text" name="message" placeholder="Ask about packages or availability..." required />
-              <button class="primary" type="submit">Send</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery" class="section gallery">
-        <div class="section-title">
-          <h2>Gallery that sells your signature style</h2>
-          <p>Highlight your best work and share private, client-ready galleries with branded downloads.</p>
-        </div>
-        <div class="gallery-grid">
-          <figure>
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Wedding couple" />
-            <figcaption>Graduation · Cinematic storytelling</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Portrait session" />
-            <figcaption>Matriculation · Natural light portraits</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=800&q=80" alt="Commercial shoot" />
-            <figcaption>Birthday · Brand-forward imagery</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Family photo" />
-            <figcaption>Family · Warm candid moments</figcaption>
-          </figure>
-        </div>
+      <section id="workspace" class="landing-section landing-cards">
+        <a class="landing-card" href="dashboard.html">
+          <h3>Dashboard</h3>
+          <p>Track shoots, approvals, and tasks at a glance.</p>
+        </a>
+        <a class="landing-card" href="inbox.html">
+          <h3>Inbox</h3>
+          <p>Stay in sync with client conversations.</p>
+        </a>
+        <a class="landing-card" href="bookings.html">
+          <h3>Bookings</h3>
+          <p>Confirm sessions and send instant updates.</p>
+        </a>
+        <a class="landing-card" href="gallery.html">
+          <h3>Gallery</h3>
+          <p>Deliver edits, collect feedback, and share favorites.</p>
+        </a>
+        <a class="landing-card" href="ai.html" id="ai">
+          <h3>AI Agent</h3>
+          <p>Answer pricing and availability requests instantly.</p>
+        </a>
       </section>
     </main>
-
-    <footer class="footer">
-      <div>
-        <h3>ClickConnect</h3>
-        <p>Client-first experiences for modern photographers.</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>hello@ClickConnect.app</p>
-        <p>(415) 555-0199</p>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <p>Pricing</p>
-        <p>Support</p>
-        <p>Blog</p>
-      </div>
-    </footer>
 
     <script src="app.js"></script>
   </body>
