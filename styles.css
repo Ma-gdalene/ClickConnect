@@ -4,8 +4,9 @@
   --card: #ffffff;
   --ink: #171a2a;
   --muted: #5f667f;
-  --accent: #6a5cff;
-  --accent-2: #ffb25f;
+  --accent: #006b3f;
+  --accent-2: #fcd116;
+  --accent-3: #ce1126;
   --border: #e4e6f4;
   --shadow: 0 20px 60px rgba(23, 26, 42, 0.12);
 }
@@ -15,6 +16,10 @@
   margin: 0;
   padding: 0;
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,9 +72,9 @@ a {
 }
 
 .primary {
-  background: var(--accent);
+  background: linear-gradient(120deg, var(--accent) 0%, #0f9d58 100%);
   color: white;
-  box-shadow: 0 12px 30px rgba(106, 92, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 107, 63, 0.35);
 }
 
 .ghost {
@@ -126,6 +131,143 @@ a {
 .stats span {
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.landing-hero {
+  background: linear-gradient(135deg, #0c1f14 0%, #111321 55%, #2a0a0f 100%);
+  color: #f8f9ff;
+  padding: 28px 64px 64px;
+}
+
+.ghana-hero .logo {
+  color: #f8f9ff;
+}
+
+.landing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.landing-links {
+  display: flex;
+  gap: 20px;
+  color: #cdd3f0;
+  font-size: 0.95rem;
+}
+
+.landing-links a {
+  transition: color 0.2s ease;
+}
+
+.landing-links a:hover {
+  color: #ffffff;
+}
+
+.landing-media {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.landing-media img {
+  width: 100%;
+  height: min(70vh, 680px);
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05);
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 48px;
+  display: grid;
+  align-content: end;
+  gap: 16px;
+  background: linear-gradient(180deg, rgba(17, 19, 33, 0.05) 0%, rgba(17, 19, 33, 0.85) 100%);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-pill {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #f8f9ff;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hero-pill:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-2px);
+}
+
+.landing-overlay h1 {
+  font-size: clamp(2.2rem, 3vw, 3.6rem);
+}
+
+.landing-overlay .subhead {
+  color: #d6dbf5;
+  max-width: 520px;
+}
+
+.landing-overlay .ghost {
+  color: #f8f9ff;
+  border-color: rgba(248, 249, 255, 0.4);
+}
+
+.landing-section {
+  padding: 72px 64px;
+  display: grid;
+  gap: 32px;
+  background: #ffffff;
+}
+
+.landing-stats {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.landing-stats strong {
+  font-size: 1.4rem;
+}
+
+.landing-stats span {
+  display: block;
+  color: var(--muted);
+}
+
+.landing-cards {
+  background: #f5f6fb;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.landing-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 30px rgba(23, 26, 42, 0.08);
+  display: grid;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(23, 26, 42, 0.12);
+  border-color: rgba(0, 107, 63, 0.4);
 }
 
 .hero-card {
@@ -670,6 +812,23 @@ a {
 
   .footer {
     padding: 40px 24px;
+  }
+
+  .landing-hero {
+    padding: 24px;
+  }
+
+  .landing-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landing-overlay {
+    padding: 32px;
+  }
+
+  .landing-section {
+    padding: 60px 24px;
   }
 
   .app-header {
