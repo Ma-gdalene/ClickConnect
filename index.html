@@ -3,89 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClickConnect | Photographer Client Hub</title>
+    <title>ClickConnect | Inbox</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="landing-hero ghana-hero">
-      <nav class="landing-nav">
-        <div class="logo">ClickConnect</div>
-        <div class="landing-links">
-          <a href="#experience">Experience</a>
-          <a href="#workspace">Workspace</a>
-          <a href="#ai">AI Agent</a>
-        </div>
-        <a class="primary" href="dashboard.html">Enter Workspace</a>
+  <body class="app-body">
+    <header class="app-header">
+      <div class="logo">ClickConnect</div>
+      <nav class="app-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="inbox.html">Inbox</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="ai.html">AI Agent</a>
+        <a href="gallery.html">Gallery</a>
       </nav>
-      <div class="landing-media">
-        <img
-          src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1600&q=80"
-          alt="Photographer capturing a client session"
-        />
-        <div class="landing-overlay">
-          <p class="eyebrow">ClickConnect Ghana</p>
-          <h1>Beautiful Ghanaian photo experiences, from booking to delivery.</h1>
-          <p class="subhead">
-            A vibrant, client-first workspace for chats, shoots, galleries, and smart AI support.
-          </p>
-          <div class="cta-row">
-            <a class="primary" href="dashboard.html">Open Dashboard</a>
-            <a class="ghost" href="inbox.html">Start a Client Chat</a>
-          </div>
-          <div class="hero-actions">
-            <a class="hero-pill" href="bookings.html">Book a shoot</a>
-            <a class="hero-pill" href="gallery.html">View gallery</a>
-            <a class="hero-pill" href="ai.html">Talk to AI agent</a>
-          </div>
-        </div>
+      <div class="app-actions">
+        <a class="ghost" href="bookings.html">Check availability</a>
+        <a class="primary" href="ai.html">Ask AI assistant</a>
       </div>
     </header>
 
-    <main>
-      <section id="experience" class="landing-section">
-        <div>
-          <h2>Everything lives in one Ghanaian studio hub.</h2>
-          <p class="subhead">
-            Move from inquiry to delivery with smooth transitions between inbox, bookings, and gallery.
-          </p>
-        </div>
-        <div class="landing-stats">
-          <div>
-            <strong>GHS 150+</strong>
-            <span>Entry-level packages</span>
+    <main class="app-main">
+      <section class="inbox-grid">
+        <aside class="app-card">
+          <h3>Photographer Chats</h3>
+          <div class="thread active">
+            <strong>Kojo Mensah</strong>
+            <span>Shared location ideas for graduation</span>
           </div>
-          <div>
-            <strong>24/7</strong>
-            <span>AI coverage in the inbox</span>
+          <div class="thread">
+            <strong>Abena Studios</strong>
+            <span>Confirmed video reel add-on</span>
           </div>
-          <div>
-            <strong>Same day</strong>
-            <span>Gallery previews</span>
+          <div class="thread">
+            <strong>Yaw Visuals</strong>
+            <span>Asked about birthday styling</span>
           </div>
-        </div>
-      </section>
-
-      <section id="workspace" class="landing-section landing-cards">
-        <a class="landing-card" href="dashboard.html">
-          <h3>Dashboard</h3>
-          <p>Manage Graduation, Matriculation, Birthday, and Family shoots.</p>
-        </a>
-        <a class="landing-card" href="inbox.html">
-          <h3>Inbox</h3>
-          <p>Direct client chats with quick replies and AI support.</p>
-        </a>
-        <a class="landing-card" href="bookings.html">
-          <h3>Bookings</h3>
-          <p>Transparent pricing in Ghana cedis plus video add-ons.</p>
-        </a>
-        <a class="landing-card" href="gallery.html">
-          <h3>Gallery</h3>
-          <p>Showcase Ghanaian stories with curated client galleries.</p>
-        </a>
-        <a class="landing-card" href="ai.html" id="ai">
-          <h3>AI Agent</h3>
-          <p>Handle pricing, availability, and booking confirmations.</p>
-        </a>
+          <div class="thread">
+            <strong>Gold Coast Collective</strong>
+            <span>Shared family shoot mood board</span>
+          </div>
+        </aside>
+        <section class="app-card">
+          <div class="conversation-header">
+            <div>
+              <h3>Kojo Mensah</h3>
+              <p class="muted">Direct chat · Graduation session planning</p>
+            </div>
+            <button class="ghost">View Brief</button>
+          </div>
+          <div class="conversation" id="conversation">
+            <div class="chat-message">Hi Mariah! I can do Saturday golden hour. Do you prefer campus or studio?</div>
+            <div class="chat-message user">Campus please, and can we add a short video reel?</div>
+            <div class="chat-message">Absolutely. Reels are GHS 200. I’ll add it to your quote.</div>
+          </div>
+          <form class="chat-input" id="inboxForm">
+            <input type="text" name="message" placeholder="Type a reply..." required />
+            <button class="primary" type="submit">Send</button>
+          </form>
+        </section>
       </section>
     </main>
 
