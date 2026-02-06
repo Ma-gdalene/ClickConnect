@@ -17,42 +17,43 @@
         <a href="gallery.html">Gallery</a>
       </nav>
       <div class="app-actions">
-        <button class="ghost">Sync Calendar</button>
-        <button class="primary">New Booking</button>
+        <a class="ghost" href="inbox.html">Message photographer</a>
+        <a class="primary" href="#request">Request booking</a>
       </div>
     </header>
 
     <main class="app-main">
       <section class="booking-layout">
         <div class="app-card">
-          <h3>Upcoming shoots</h3>
+          <h3>Photographer availability</h3>
+          <p class="muted">Select a preferred slot and we’ll confirm it in the inbox.</p>
           <div class="calendar-list">
             <div class="calendar-item">
               <div>
-                <strong>Apr 26 · Graduation</strong>
-                <span>Zara + Luis · Riverfront Park</span>
+                <strong>Thu · Golden Hour</strong>
+                <span>Outdoor · Osu Oxford Street</span>
               </div>
-              <span class="status-pill">Confirmed</span>
+              <span class="status-pill">Open</span>
             </div>
             <div class="calendar-item">
               <div>
-                <strong>Apr 29 · Branding</strong>
-                <span>Elena Park · Downtown Studio</span>
+                <strong>Sat · Morning</strong>
+                <span>Studio · East Legon</span>
               </div>
-              <span class="status-pill warning">Reschedule</span>
+              <span class="status-pill">Open</span>
             </div>
             <div class="calendar-item">
               <div>
-                <strong>May 02 · Family</strong>
-                <span>Tate Family · Oak Grove</span>
+                <strong>Sun · Evening</strong>
+                <span>Beach · Labadi</span>
               </div>
-              <span class="status-pill">Questionnaire sent</span>
+              <span class="status-pill warning">Waitlist</span>
             </div>
           </div>
         </div>
         <div class="app-card">
-          <h3>Price list (GHS)</h3>
-          <p class="muted">Transparent packages for Ghanaian clients.</p>
+          <h3>Packages (GHS)</h3>
+          <p class="muted">Choose a package for your session.</p>
           <ul class="list">
             <li>
               <div>
@@ -90,9 +91,9 @@
               <span class="status-pill warning">GHS 1,500</span>
             </li>
           </ul>
-          <button class="ghost">Open booking settings</button>
+          <a class="ghost" href="inbox.html">Ask for a custom quote</a>
         </div>
-        <div class="app-card">
+        <div class="app-card" id="request">
           <h3>Video add-ons</h3>
           <p class="muted">Upgrade with video coverage and social clips.</p>
           <div class="availability">
@@ -104,7 +105,7 @@
                 <li>Full event film · GHS 1,000</li>
               </ul>
             </div>
-            <button class="primary">Share price list</button>
+            <button class="primary">Request booking</button>
           </div>
         </div>
       </section>
@@ -113,5 +114,3 @@
     <script src="app.js"></script>
   </body>
 </html>
-
-
