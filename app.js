@@ -111,18 +111,23 @@ function handleInbox(event) {
 
 const agentKnowledge = {
   pricing: {
-    graduation: "$350",
-    branding: "$600",
-    family: "$450",
-    matriculation: "$380",
-    birthday: "$320",
+    graduation: "GHS 350",
+    matriculation: "GHS 300",
+    birthday: "GHS 250",
+    family: "GHS 450",
+    premium: "GHS 1,500",
   },
   availability: [
     "Apr 30 · Golden Hour",
     "May 03 · Morning",
     "May 05 · Afternoon",
   ],
-  addOns: ["Extra retouching", "Second location", "Rush gallery delivery"],
+  addOns: [
+    "Highlight video (GHS 400)",
+    "Instagram reels (2) (GHS 200)",
+    "Full event film (GHS 1,000)",
+    "Rush gallery delivery",
+  ],
 };
 
 function formatAvailability() {
@@ -132,7 +137,7 @@ function formatAvailability() {
 function generateAgentReply(message) {
   const text = message.toLowerCase();
   if (text.includes("price") || text.includes("cost")) {
-    return `Here are current package rates: Graduation ${agentKnowledge.pricing.graduation}, Branding ${agentKnowledge.pricing.branding}, Family ${agentKnowledge.pricing.family}, Matriculation ${agentKnowledge.pricing.matriculation}, Birthday ${agentKnowledge.pricing.birthday}.`;
+    return `Here are current package rates: Graduation ${agentKnowledge.pricing.graduation}, Matriculation ${agentKnowledge.pricing.matriculation}, Birthday ${agentKnowledge.pricing.birthday}, Family ${agentKnowledge.pricing.family}, Premium story day ${agentKnowledge.pricing.premium}.`;
   }
   if (text.includes("availability") || text.includes("available") || text.includes("slots")) {
     return `The next available sessions are ${formatAvailability()}. Want me to reserve one?`;
@@ -141,10 +146,13 @@ function generateAgentReply(message) {
     return "Great! I can lock in a session. Which date and time window should I hold for you?";
   }
   if (text.includes("gallery") || text.includes("portfolio")) {
-    return "I can share a curated gallery link with recent graduation, branding, and family sessions. Which style do you prefer?";
+    return "I can share a curated gallery link with recent graduation, matriculation, birthday, and family sessions. Which style do you prefer?";
   }
   if (text.includes("add-on") || text.includes("extra")) {
     return `Popular add-ons include ${agentKnowledge.addOns.join(", ")}. Want details on any of those?`;
+  }
+  if (text.includes("video") || text.includes("reel")) {
+    return "Video options include a highlight video (GHS 400), Instagram reels (2) (GHS 200), or a full event film (GHS 1,000). Which one fits your shoot?";
   }
   if (text.includes("hello") || text.includes("hi")) {
     return "Hi there! I can help with pricing, availability, or booking a session.";
