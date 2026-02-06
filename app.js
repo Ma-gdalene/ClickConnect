@@ -146,7 +146,7 @@ function generateAgentReply(message) {
     return "Great! I can lock in a session. Which date and time window should I hold for you?";
   }
   if (text.includes("gallery") || text.includes("portfolio")) {
-    return "I can share a curated gallery link with recent graduation, matriculation, birthday, and family sessions. Which style do you prefer?";
+    return "I can share your gallery link or show recent graduation, matriculation, birthday, and family examples. What would you like?";
   }
   if (text.includes("add-on") || text.includes("extra")) {
     return `Popular add-ons include ${agentKnowledge.addOns.join(", ")}. Want details on any of those?`;
@@ -155,7 +155,7 @@ function generateAgentReply(message) {
     return "Video options include a highlight video (GHS 400), Instagram reels (2) (GHS 200), or a full event film (GHS 1,000). Which one fits your shoot?";
   }
   if (text.includes("hello") || text.includes("hi")) {
-    return "Hi there! I can help with pricing, availability, or booking a session.";
+    return "Hi there! I can help you book a session, confirm availability, or review packages.";
   }
   return "Thanks for the note! I can help with pricing, availability, or booking—what would you like to explore first?";
 }
@@ -204,4 +204,3 @@ if (notifications) {
   addNotification("AI Concierge is monitoring new inquiries.");
   addNotification("Gallery preview sent to Ava + Noah.");
 }
-
